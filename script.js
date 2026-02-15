@@ -1,9 +1,3 @@
-/* VEROIR script.js - SAFE UPGRADED VERSION
-   FIXES:
-   - Cart item not adding issue
-   - Exact product image now always shows in cart
-   NO layout / HTML / CSS changes
-*/
 
 /* ---------- Storage helpers ---------- */
 function loadCart(){ try{ return JSON.parse(localStorage.getItem('veroirCart')||'[]'); }catch(e){return [];} }
@@ -36,7 +30,7 @@ function addToCartObj(obj){
         cart.push(obj);
     }
     saveCart(cart);
-    alert(obj.name + ' added to cart');
+    // alert(obj.name + ' added to cart');
 }
 
 function addToCart(id,name,price,img){
